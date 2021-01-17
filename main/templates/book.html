@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="{% static 'styles/book.css' %}">
 </head>
 <body>
-    <div class="store_container">
-        <h1>book store</h1>
-        {% for bookstore in book_store %}
-        <h2>{{ bookstore.title}}</h2>
-        <h3>{{ bookstore.subtitle}}</h3>
-        <h3>{{ bookstore.description}}</h3>
-        <h3>{{ bookstore.author}}</h3>
-        <h3>{{ bookstore.price}}</h3>
-        {% endfor %}
-    </div>
+    <section>
+        <div class="store_container">
+            <h1>book store</h1>
+            
+        </div>
+        <div class="store_item">
+            <div class="item">
+                {% for bookstore in book_store %}
+                <h2>{{ bookstore.title}}</h2>
+                <h3>{{ bookstore.subtitle}}</h3>
+                <h3>{{ bookstore.description}}</h3>
+                <h3>{{ bookstore.author}}</h3>
+                <h3>{{ bookstore.price}}</h3>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+    
     
 </body>
 </html>
