@@ -13,9 +13,6 @@
             <form action="{% url 'add-book' %}" method="POST">
             {% csrf_token %}
             <input class="create_input" type="text" placeholder="написать заголовок" name="book_text"/>
-            <input class="create_input" type="text" placeholder="написать подзаголовок" name=""/>
-            <input class="create_input" type="text" placeholder="описать" name=""/>
-            <input class="create_input" type="text" placeholder="цена" name=""/>
             <button class="create_button">Добавить</button>
             </form>
         </div>

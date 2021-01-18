@@ -2,7 +2,7 @@ from django.db import models
 
 class BookStore(models.Model):
     title = models.CharField(max_length=50)
-    subtitle = models.BooleanField(default=False)
+    subtitle = models.CharField(max_length=50)
     description = models.BooleanField(default=False)
     price = models.BooleanField(default=False)
     genre = models.BooleanField(default=False)
