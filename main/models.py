@@ -2,10 +2,10 @@ from django.db import models
 
 class BookStore(models.Model):
     title = models.CharField(max_length=50)
-    subtitle = models.CharField(max_length=50)
-    description = models.CharField(max_length=100)
-    price = models.CharField(max_length=10)
+    subtitle = models.BooleanField(default=False)
+    description = models.BooleanField(default=False)
+    price = models.BooleanField(default=False)
     genre = models.BooleanField(default=False)
-    author = models.CharField(max_length=20)
+    author = models.BooleanField(default=False)
     year = models.BooleanField(default=False)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)
