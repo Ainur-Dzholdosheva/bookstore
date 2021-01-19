@@ -45,8 +45,8 @@
                 <div class="store_item_footer">
                     <p>{{bookstore.date}}</p>
                     <div class="action_buttons">
-                        <img src="{% static './icons/unmarked.png' %}">
-                        <img src="{% static './icons/delete.png' %}">
+                         <a href=""><img src="{% static './icons/unmarked.png' %}"></a>
+                         <a href="{% url 'delete-book' bookstore.id %}"><img src="{% static './icons/delete.png' %}"></a>
                     </div>
                 </div>
             </div>

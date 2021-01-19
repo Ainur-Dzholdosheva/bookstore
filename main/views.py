@@ -17,3 +17,8 @@ def add_book(request):
     book = BookStore(title=text, subtitle=subtitle, description=description, price=price, genre=genre, author=author, year=year)
     book.save()
     return redirect(homepage)
+
+def delete_book(request, id):
+    book = BookStore.objects.get(id=id)
+    book.delete()
+    return redirect(homepage)

@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", homepage, name="home"),
     path("add-book/", add_book, name="add-book"),
+    path("delete-book/<id>/", delete_book, name="delete-book"),
 ]   +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
     +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
