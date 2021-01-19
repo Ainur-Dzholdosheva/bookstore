@@ -45,23 +45,36 @@ section{
     border: 1px solid grey;
     border-radius: 5px;
     width: 24%;
-    padding: 10px 25px;
-    background-color: #77a1bd;
+    padding: 10px 15px;
+    background-color: #C8E6C9;
     margin-bottom: 20px;
 }
-.item{
-    text-align: center;
+.store_item.done{
+    background-color: #E0E0E0;
+    text-decoration: line-through;
+    color: #757575;
+}
+.store_item.done h4, .store_item.done p, .store_item.done span{
+    color: #757575;
+}
+.store_item.done img{
+    opacity: 0.5;
+}
+.store_item.marked{
+    background-color: #FFE082;
+    border: 2px solid #fad06a;
+    width: 300px;
 }
 .store_item_header{
     display: flex;
     align-items: center;
     min-height: 35px;
 }
-.store_item_header h3{
+.store_item_header h4{
     font-size: 18px;
     font-family: sans-serif;
 }
-.store_item_header h3 a{
+.store_item_header h4 a{
     text-decoration: none;
 }
 .store_item_footer{

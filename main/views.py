@@ -22,3 +22,9 @@ def delete_book(request, id):
     book = BookStore.objects.get(id=id)
     book.delete()
     return redirect(homepage)
+
+def mark_book(request, id):
+    book = BookStore.objects.get(id=id)
+    book.is_favorite = True
+    book.save()
+    return redirect(homepage)
