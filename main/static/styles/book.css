@@ -52,3 +52,33 @@ section{
 .item{
     text-align: center;
 }
+.store_item_header{
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+}
+.store_item_header h3{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.store_item_header h3 a{
+    text-decoration: none;
+}
+.store_item_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.store_item_footer p{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.store_item_footer .action_button{
+    display: flex;
+}
+.store_item_footer img{
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+}
