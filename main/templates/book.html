@@ -13,6 +13,12 @@
             <form action="{% url 'add-book' %}" method="POST">
             {% csrf_token %}
             <input class="create_input" type="text" placeholder="написать заголовок" name="book_text"/>
+            <input class="create_input" type="text" placeholder="написать подзаголовок" name="book_subtitle"/>
+            <input class="create_input" type="text" placeholder="описание" name="book_description"/>
+            <input class="create_input" type="text" placeholder="цена" name="book_price"/>
+            <input class="create_input" type="text" placeholder="жанр" name="book_genre"/>
+            <input class="create_input" type="text" placeholder="автор" name="book_author"/>
+            <input class="create_input" type="text" placeholder="год издания" name="book_year"/>
             <button class="create_button">Добавить</button>
             </form>
         </div>
@@ -20,14 +26,15 @@
             {% for bookstore in book_store %}
             <div class="store_item">
                 <div class="item">
-                
                 <h2>{{ bookstore.title}}</h2>
                 <h3>{{ bookstore.subtitle}}</h3>
                 <h3>{{ bookstore.description}}</h3>
                 <h3>{{ bookstore.author}}</h3>
                 <h3>{{ bookstore.price}}</h3>
-                <img src="{% static './icons/EW_Harry-Potter_Featured.jpg' %}" width="250px" height="200px">
-                
+                <h3>{{bookstore.genre}}</h3>
+                <h3>{{bookstore.author}}</h3>
+                <h3>{{bookstore.year}}</h3>
+                <h4>{{bookstore.date}}</h4>
                 </div>
                 
             </div>
