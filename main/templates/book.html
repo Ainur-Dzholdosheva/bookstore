@@ -28,16 +28,22 @@
             <div class="store_item
                 {% if bookstore.is_favorite %}
                     marked
+                {% elif bookstore.is_closed %}
+                    done
                 {% endif %}
             ">
                 <div class="store_item_header">
                     <label class="checkbox_container">
-                        <input type="checkbox">
+                        <input type="checkbox"
+                        {% if bookstore.is_closed %}
+                           checked
+                        {% endif %}
+                        >
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div class="book_item">
-                <h1>{{ bookstore.title}}</h1>
+                <h1><a href="{% url 'close-book' bookstore.id %}">{{ bookstore.title}}</a></h1>
                 <h3>{{ bookstore.subtitle}}</h3>
                 <h3>{{ bookstore.description}}</h3>
                 <h3>{{ bookstore.author}}</h3>
@@ -49,7 +55,11 @@
                 <div class="store_item_footer">
                     <p>{{bookstore.date}}</p>
                     <div class="action_buttons">
-                         <a href="{% url 'mark-book' bookstore.id %}"><img src="{% static './icons/unmarked.png' %}"></a>
+                        {% if bookstore.is_favorite %}
+                         <a href="{% url 'mark-book' bookstore.id %}"><img src="{% static './icons/marked.png' %}"></a>
+                         {% else %}
+                         <a href="{% url 'mark-book' bookstore.id %}"><img src= "{% static './icons/unmarked.png' %}"></a>
+                        {% endif %}
                          <a href="{% url 'delete-book' bookstore.id %}"><img src="{% static './icons/delete.png' %}"></a>
                     </div>
                 </div>

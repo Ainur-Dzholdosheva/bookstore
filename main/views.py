@@ -28,3 +28,9 @@ def mark_book(request, id):
     book.is_favorite = True
     book.save()
     return redirect(homepage)
+
+def close_book(request, id):
+    book = BookStore.objects.get(id=id)
+    book.is_closed = not book.is_closed
+    book.save()
+    return redirect(homepage)
