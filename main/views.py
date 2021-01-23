@@ -25,7 +25,7 @@ def delete_book(request, id):
 
 def mark_book(request, id):
     book = BookStore.objects.get(id=id)
-    book.is_favorite = True
+    book.is_favorite = not book.is_favorite
     book.save()
     return redirect(homepage)
 
