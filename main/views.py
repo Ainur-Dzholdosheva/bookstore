@@ -34,3 +34,7 @@ def close_book(request, id):
     book.is_closed = not book.is_closed
     book.save()
     return redirect(homepage)
+
+def detail(request, id):
+    detail_object = BookStore.objects.get(id=id)
+    return render(request, "book_details.html", {"detail_object":detail_object})

@@ -61,6 +61,7 @@
                          <a href="{% url 'mark-book' bookstore.id %}"><img src= "{% static './icons/unmarked.png' %}"></a>
                         {% endif %}
                          <a href="{% url 'delete-book' bookstore.id %}"><img src="{% static './icons/delete.png' %}"></a>
+                         <a href="{% url 'detail' bookstore.id %}">***</a>
                     </div>
                 </div>
             </div>
