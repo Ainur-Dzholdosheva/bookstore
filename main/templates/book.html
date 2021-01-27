@@ -11,6 +11,7 @@
 <body>
     <section>
         <div class="create_container">
+            <h1 class="headline">Book store</h1>
             <form action="{% url 'add-book' %}" method="POST">
             {% csrf_token %}
             <input class="create_input" type="text" placeholder="написать заголовок" name="book_text"/>
