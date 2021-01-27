@@ -15,10 +15,20 @@ section{
 .create_container{
     width: 80%;
 }
+.headline{
+    font-size: 30px;
+    border: 2px solid pink;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: pink;
+}
 .create_input{
     padding: 12px 5px;
     font-size: 18px;
     width: 80%;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 .create_button{
     padding: 12px 24px;
@@ -95,12 +105,4 @@ section{
     height: 25px;
     margin: 0 5px;
     cursor: pointer;
-}
-.headline{
-    font-size: 30px;
-    border: 2px solid pink;
-    width: 200px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: pink;
 }
